@@ -1,16 +1,55 @@
 .home {
 
+  @media @mobile {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
   header {
+    padding: 25px 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+
+    @media @mobile {
+      .flex-col();
+      .centerit();
+      padding-bottom: 15px;
   }
+    .fun-bus {
+      @media @mobile {
+      padding-bottom: 15px;
+    }
+    }
+  }
+
+
+  .funbus-description{
+    margin-top: -1px;
+    border-bottom: 2px dashed #C0C0C0;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+  }  
 
   hr {
     width: 500%;
+    margin: 0 auto;
     margin-left: -200%;
     border-top: 2px dashed #C0C0C0;
+
+    @media @mobile {
+     margin: 0 auto;
+     width: 108%;
+     margin-left: -20px;
+    }
+
   }
 
   .content-section {
@@ -19,19 +58,39 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    @media @mobile {
+    .flex-col();    
+    }
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+      
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+  
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
+
       }
     }
   }
@@ -40,20 +99,40 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      .flex-col();
+
+    }
+    
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        order: 1;
+      }
+      
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        order: 2;
+      }
+
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -66,9 +145,32 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      margin: 0 auto;
+      .flex-col();
+      justify-content: center;
+      width: 80%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+      }
+
     }
+
+    .btn {
+      .cool-button(@eastern-blue, @white);
+
+      @media @mobile {
+        width: 100%;
+        text-align: center;
+      }
+
+  }
+
   }
 }// home
