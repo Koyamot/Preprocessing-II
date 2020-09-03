@@ -1,1 +1,21 @@
 // Mixins in here
+
+.cool-button(@background, @color: @white) {
+    display: inline-block;
+    padding: 12px 50px;
+    border-radius: 16px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 1s ease;
+
+    background: @background;
+    color: @color;
+
+    &:hover, &:focus {
+
+        background: darken(@background, 15%);
+    }
+}
